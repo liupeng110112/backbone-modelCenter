@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>模型中心</title>
+    <link rel="stylesheet" href="http://172.20.0.181:81/thsft/css/modelCenter/style.css">
+</head>
+
+<body>
+    <div class="model">
+        <div class="layer-mask"></div>
+        <div class="model_head">
+            <div class="head_tip">
+                <a href="javascript:" class="head_tip_close">
+                </a>
+            </div>
+            <a href="javascript:" class="head_tip_close">
+            </a><a data-href="/thsft/iFindService/ModelCenter/template/index" class="upload_model fr" id="upload-model">上传模型</a>
+            <div class="personal_info">
+                <h1 class="person_name"></h1>
+                <p class="personal_info_detail">
+
+                </p>
+            </div>
+        </div>
+
+        <div class="model_main">
+            <div class="model_main_list fl" id="menu">
+                <ul>
+                    <li>
+                        <a data-type="my" href="#/myModel">
+                            <span class="icon icon_meun_one"></span>我的模型</a>
+                    </li>
+                    <li class="bottom_sep cur">
+                        <a data-type="rm" href="#/">
+                            <span class="icon icon_meun_two"></span>热门推荐</a>
+                    </li>
+                    <li>
+                        <a data-type="all" href="#/allModel">
+                            <span class="icon icon_meun_three"></span>全部模型</a>
+                    </li>
+                    <li><a data-fl="001" href="#/allModel/chjy">晨会纪要</a>
+                    </li>
+                    <li><a data-fl="002" href="#/allModel/gsjj">公司研究</a>
+                    </li>
+                    <li><a data-fl="003">行业研究</a>
+                    </li>
+                    <li><a data-fl="004">宏观研究</a>
+                    </li>
+                    <li><a data-fl="005">策略研究</a>
+                    </li>
+                    <li><a data-fl="006">基金研究</a>
+                    </li>
+                    <li><a data-fl="007">债券研究</a>
+                    </li>
+                    <li><a data-fl="008">期货研究</a>
+                    </li>
+                    <li><a data-fl="009">海外市场</a>
+                    </li>
+                    <li><a data-fl="010">海外市场</a>
+                    </li>
+                    <li><a data-fl="011">英文报告</a>
+                    </li>
+                    <li><a data-fl="012">金融工程</a>
+                    </li>
+                    <li><a data-fl="013">理财类研究报告</a>
+                    </li>
+                    <li><a data-fl="014">分类测试4</a>
+                    </li>
+                    <li><a data-fl="015">模型测试5</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl model_main_content" id="main">
+                <div class="model_center" id="model-main">
+                    <div class="model_center_top clearfix">
+                        <ul class="model_order fr" id="order">
+                            <li data-type="xzs">
+                                <a data-href="###"></a>
+                                <span>下载次数</span>
+                                <span class="down_arrow hide">↓</span>
+                                <span class="up_arrow hide">↑</span>
+                                <input type="hidden" data-order="">
+                            </li>
+                            <li data-type="pls">
+                                <a data-href="###"></a>
+                                <span>讨论个数</span>
+                                <span class="down_arrow hide">↓</span>
+                                <span class="up_arrow hide">↑</span>
+                                <input type="hidden" data-order="">
+                            </li>
+                            <li data-type="scsj">
+                                <a data-href="###"></a>
+                                <span>新鲜度</span>
+                                <span class="down_arrow hide">↓</span>
+                                <span class="up_arrow hide">↑</span>
+                                <input type="hidden" data-order="">
+                            </li>
+                            <li data-type="pf">
+                                <a data-href="###"></a>
+                                <span>评分</span>
+                                <span class="down_arrow hide">↓</span>
+                                <span class="up_arrow hide">↑</span>
+                                <input type="hidden" data-order="">
+                            </li>
+                        </ul>
+                        <b class="model_title">热门推荐</b>共28个
+                    </div>
+                    <div class="model_list">
+                        <ul class="clearfix" id="model_list">
+                        </ul>
+                        <div class="loading"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/template" id="status">
+    	<span>收藏：</span><a data-type="sc" id="fav-count"><%= favCount %></a>
+    </script>
+    <script type="text/template" id="model-list">
+	        <div class="model_instru fl">
+	            <p class="model_instru_info">
+	                <span class="model_instru_author">
+	                    <a class="model-name" data-href="/thsft/iFindService/ModelCenter/template/detail?id=10439">
+	                        <em class="text-overflow download_name" style="max-width:120px;" title="11"><%= title %></em>
+	                    </a>
+	                    <a data-href="###" class="author">【<em class="text-overflow" style="max-width:65px;text-align:center" data-type="1" title="ifind_e001"><%= author %></em>】</a>
+	                </span>
+	                <span class="model_instru_download">下载：<%= downloadTime %>次</span>
+	                <span class="model_instru_comment">评论：<%= comment %>个</span>
+	            </p>
+	            <p class="text-overflow" style="width:450px;" title="dddd"><%= content %></p>
+	        </div>
+	        <div class="model_grade fl">
+	            <div class="mb5 mt5">
+	                <img src="images/star-off.png" alt="1">&nbsp;<img src="images/star-off.png" alt="2">&nbsp;<img src="images/star-off.png" alt="3">&nbsp;<img src="images/star-off.png" alt="4">&nbsp;<img src="images/star-off.png" alt="5">
+	            </div>
+	            <p>
+	                <span class="grade_num"><%= content %></span>分</p>
+	        </div>
+	        <div class="model_fav fl">
+	            <span class='icon_fav <%= fav ? "" : "icon_fav_disable" %>  icon mt5' data-id="10439"></span>
+	            <p>
+		            <%= fav ? '已收藏' : '未收藏' %>
+	            </p>
+	        </div>
+
+	        <div class="model_down model_btn fl">
+	            <a href="http://172.20.0.181:81/thsft/iFindService/ModelCenter/index#" data-href="/thsft/iFindService/ModelCenter/file/get-file?path=&amp;id=10439&amp;name=11&amp;from=1" class="download">
+	                <span>下&nbsp;&nbsp;载</span>
+	                <input type="hidden" value="">
+	            </a>
+	        </div>
+	        </div>
+
+    </script>
+		<script src="libs/jquery.js"></script>
+		<script src="libs/underscore.js"></script>
+		<script src="libs/backbone.js"></script>
+		<script src="models/model.js"></script>
+		<script src="models/models.js"></script>
+		<script src="views/view.js"></script>
+		<script src="views/views.js"></script>
+		<script src="router/router.js"></script>
+</body>
+
+</html>
