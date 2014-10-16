@@ -1,0 +1,13 @@
+var Models = Backbone.Collection.extend({
+  model:Model,
+  url:'data/list.php',
+   // 收藏数统计
+  favCount: function(){
+    return this.where({fav:true});
+  },
+  comparator: function(model){
+    // 如何实现降序暂时没找到
+    return model.get('comment');
+  }
+})
+var models = new Models;
