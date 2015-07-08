@@ -11,7 +11,6 @@ var Views = Backbone.View.extend({
   },
   render: function(){
     var favCount = models.favCount().length;
-    // 为什么下面会输出三次呢（哪几个地方实现了渲染操作呢）
     // console.log(favCount);
     this.$('.personal_info_detail').html(this.template({
       favCount: favCount
