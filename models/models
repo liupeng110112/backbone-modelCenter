@@ -6,7 +6,7 @@ var Models = Backbone.Collection.extend({
     return this.where({fav:true});
   },
   comparator: function(model){
-    // 如何实现降序暂时没找到
+    
     return model.get('comment');
   }
 })
